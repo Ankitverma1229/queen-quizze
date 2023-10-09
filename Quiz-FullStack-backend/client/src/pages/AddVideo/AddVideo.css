@@ -1,0 +1,19 @@
+.custom-file-button input[type="file"] {
+  margin-left: -2px !important;
+}
+.custom-file-button input[type="file"]::file-selector-button {
+  display: none;
+}
+.custom-file-button input[type="file"]::before {
+  content: "Add Video";
+  color: #85909b;
+  margin-right: 30px;
+}
+.custom-file-button:hover label {
+  background-color: #dde0e3;
+  cursor: pointer;
+}
+
+.text-style {
+  text-transform: capitalize;
+}

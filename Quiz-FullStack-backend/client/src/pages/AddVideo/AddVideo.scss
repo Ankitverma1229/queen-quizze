@@ -1,0 +1,24 @@
+.custom-file-button {
+  input[type="file"] {
+    margin-left: -2px !important;
+
+    &::-webkit-file-upload-button {
+      display: none;
+    }
+    &::file-selector-button {
+      display: none;
+    }
+  }
+
+  input[type="file"]::before {
+    content: "Add Video";
+    color: #85909b;
+    margin-right: 30px;
+  }
+  &:hover {
+    label {
+      background-color: #dde0e3;
+      cursor: pointer;
+    }
+  }
+}
