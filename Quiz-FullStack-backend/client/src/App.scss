@@ -1,0 +1,12 @@
+$background-color_1: rgba(242, 244, 248, 1);
+
+@import "https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&display=swap";
+body {
+  background-color: $background-color_1;
+  padding: 15px;
+}
+@media (min-width: 768px) {
+  body {
+    padding: 0;
+  }
+}
