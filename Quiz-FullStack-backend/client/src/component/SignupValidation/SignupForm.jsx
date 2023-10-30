@@ -52,7 +52,7 @@ function SignupForm() {
       );
     } else {
       axios
-        .post("http://localhost:6500/api/admin/register", user)
+        .post(`${process.env.REACT_APP_BASE_URL}/register`, user)
         .then((response) => {
           Swal.fire({
             position: "center",

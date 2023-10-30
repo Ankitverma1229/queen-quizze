@@ -28,7 +28,7 @@ const PreviewPage = () => {
   const getPaginatedUsers = async () => {
     try {
       const responseData = await axios.get(
-        `http://localhost:6500/api/admin/paginateQuestion/${question_id}?page=${currentPage.current}&limit=${limit}`
+        `${process.env.REACT_APP_BASE_URL}/paginateQuestion/${question_id}?page=${currentPage.current}&limit=${limit}`
       );
       setPageCount(responseData.data.pageCount);
       let quizDetails = responseData.data.newData;
@@ -41,7 +41,7 @@ const PreviewPage = () => {
   const getAllQuestion = async () => {
     try {
       const response = await axios.get(
-        "http://localhost:6500/api/admin/QuestionData"
+        `${process.env.REACT_APP_BASE_URL}/QuestionData`
       );
       const quizDetails = response.data.newData;
       allData = quizDetails.find((data) => data._id === question_id);

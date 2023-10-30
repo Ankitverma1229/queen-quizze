@@ -36,7 +36,7 @@ function Category() {
 
   function showAllCategory() {
     axios
-      .get("http://localhost:6500/api/admin/videoCategoryData")
+      .get(`${process.env.REACT_APP_BASE_URL}/videoCategoryData`)
       .then((response) => {
         setAllCategory(response.data.data);
       })
@@ -66,7 +66,7 @@ function Category() {
 
     if (category) {
       axios
-        .post("http://localhost:6500/api/admin/videoCategory", newCategoryInput)
+        .post(`${process.env.REACT_APP_BASE_URL}/videoCategory`, newCategoryInput)
 
         .then((response) => {
           console.log(response);

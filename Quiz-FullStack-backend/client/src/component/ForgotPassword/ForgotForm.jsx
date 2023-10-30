@@ -29,7 +29,7 @@ const ForgotForm = () => {
     } else {
       try {
         const response = await axios.post(
-          "http://localhost:6500/api/admin/forgotPassword",
+          `${process.env.REACT_APP_BASE_URL}/forgotPassword`,
           { email: trimmedEmail }
         );
 

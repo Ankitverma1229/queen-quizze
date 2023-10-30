@@ -20,7 +20,7 @@ function Videos() {
   const getPaginatedUsers = async () => {
     try {
       const responseData = await axios.get(
-        `http://localhost:6500/api/admin/paginateUser?page=${currentPage.current}&limit=${limit}`
+        `${process.env.REACT_APP_BASE_URL}/paginateUser?page=${currentPage.current}&limit=${limit}`
       );
       setPageCount(responseData.data.pageCount);
       const extractedData = responseData.data.newData.map((item) => ({

@@ -19,7 +19,7 @@ const CreateNewPasswordForm = () => {
   const adminValidate = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:6500/api/admin/resetPassword/${id}/${token}`
+        `${process.env.REACT_APP_BASE_URL}/resetPassword/${id}/${token}`
       );
 
       if (response.status === 201) {
@@ -79,7 +79,7 @@ const CreateNewPasswordForm = () => {
     } else {
       try {
         const response = await axios.post(
-          `http://localhost:6500/api/admin/updatePassword/${id}/${token}`,
+          `${process.env.REACT_APP_BASE_URL}/updatePassword/${id}/${token}`,
           { password: password }
         );
 

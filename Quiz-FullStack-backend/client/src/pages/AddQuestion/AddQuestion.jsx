@@ -186,7 +186,7 @@ const AddQuestion = (props) => {
     try {
       const savedQuestions = JSON.parse(localStorage.getItem("savedQuestions"));
       await axios
-        .post(`http://localhost:6500/api/admin/addQuestion/${quiz_id}`, {
+        .post(`${process.env.REACT_APP_BASE_URL}/addQuestion/${quiz_id}`, {
           questionAllData: savedQuestions,
         })
         .then((response) => {

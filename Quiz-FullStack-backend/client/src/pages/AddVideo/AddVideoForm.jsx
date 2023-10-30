@@ -37,7 +37,7 @@ const AddVideo = (props) => {
     const getAllVideos = async () => {
         try {
             const response = await axios.get(
-                "http://localhost:6500/api/admin/getVideosData"
+                `${process.env.REACT_APP_BASE_URL}/getVideosData`
             );
             setAllVideoData(response.data);
         } catch (error) {
@@ -48,7 +48,7 @@ const AddVideo = (props) => {
     const getAllCategory = async () => {
         try {
             const response = await axios.get(
-                "http://localhost:6500/api/admin/videoCategoryData"
+                `${process.env.REACT_APP_BASE_URL}/videoCategoryData`
             );
             setAllCategory(response.data.data);
         } catch (error) {
@@ -103,7 +103,7 @@ const AddVideo = (props) => {
 
                 try {
                     const response = await axios.post(
-                        "http://localhost:6500/api/admin/addVideo",
+                        `${process.env.REACT_APP_BASE_URL}/addVideo`,
                         formData
                     );
                     const video_id = response.data._id;

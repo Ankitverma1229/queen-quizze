@@ -16,7 +16,7 @@ function VideoCard(props) {
       >
         <div className="h-[75%] rounded-lg">
           <img
-            src={`http://localhost:6500/${props.videoThumbnailURL}`}
+            src={`${process.env.REACT_APP_BASE_URL}/${props.videoThumbnailURL}`}
             alt="Video thumbnail"
             className="h-[100%] w-[100%] rounded-t-lg"
           />
