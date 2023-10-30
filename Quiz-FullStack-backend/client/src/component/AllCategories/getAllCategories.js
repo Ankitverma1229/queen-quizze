@@ -5,7 +5,7 @@ import axios from "axios";
 function Categories(props) {
   function handleDeleteCategory() {
     axios
-      .delete(`http://localhost:6500/api/admin/videoCategories/${props._id}`)
+      .delete(`${process.env.REACT_APP_BASE_URL}/videoCategories/${props._id}`)
       .then((response) => {
         console.log(response);
       })

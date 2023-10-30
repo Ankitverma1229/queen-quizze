@@ -52,7 +52,7 @@ const LoginForm = () => {
     if (email && password) {
       try {
         const response = await axios.post(
-          "http://localhost:6500/api/admin/login",
+          `${process.env.REACT_APP_BASE_URL}/login`,
           inputLoginData
         );
 

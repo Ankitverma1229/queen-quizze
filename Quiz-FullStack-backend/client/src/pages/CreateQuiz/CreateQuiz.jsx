@@ -47,7 +47,7 @@ const CreateQuiz = (props) => {
     } else {
       try {
         const response = await axios.post(
-          `http://localhost:6500/api/admin/createQuiz/${video_id}`,
+          `${process.env.REACT_APP_BASE_URL}/createQuiz/${video_id}`,
           handleQuizData
         );
 
